@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALKFUSION shoes shopping website</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- header section starts  -->
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <a href="#" class="logo">WALKFUSION SHOES</a>
+    
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#featured">featured</a>
+            <a href="#review">review</a>
+        </nav>
+    
+        <div class="icons">
+            
+            <a href="cart.php" class="fas fa-shopping-cart" title="Your Cart"></a>
+            <a href="#" class="fas fa-user" id="logoutBtn" title="Logout"></a>
+        </div>
+    </header>
+    
+    <!-- ✅ Place script at the bottom -->
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // prevent default anchor behavior
+            if (confirm("Logout?")) {
+                window.location.href = "Dashboard.php";
+            }
+        });
+    </script>
+    
+    
+    
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="content">
+                <span>Nike</span>
+                <h3>Nike metcon shoes</h3>
+                <p>The Nike Metcon 9 provides next level stability, mobility and comfort to give the confidence you need to crush your training.</p>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Nike metcon shoes">
+                    <input type="hidden" name="price" value="99.99">
+                    
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="home-shoe-1.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+                  
+                
+            </div>
+            <div class="image">
+                <img src="images/home-shoe-1.png" class="shoe" alt="">
+                <img src="images/home-text-1.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>Puma </span>
+                <h3>Puma White Airforce</h3>
+                <p>Step up your style game with the Puma White Airforce – the perfect fusion of comfort, performance, and clean street style.</p>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Puma White Airforce">
+                    <input type="hidden" name="price" value="99.99">
+                    
+
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="Puma_whiteshoes.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+                
+            </div>
+            <div class="image">
+                <img src="images/Puma_whiteshoes.png" class="shoe" alt="">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>Nike</span>
+                <h3>Nike Air Jordan Low</h3>
+                <p> a legendary design that blends classic heritage with modern style. Featuring a sleek low-top silhouette, premium leather upper, and the iconic Jumpman logo, these sneakers deliver both comfort and bold style. </p>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Nike Air Jordan Low">
+                    <input type="hidden" name="price" value="99.99">
+                  
+
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="Nike_AIRJ.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+                
+            </div>
+            <div class="image">
+                <img src="images/Nike_AIRJ.png" class="shoe" alt="">
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- service section starts  -->
+
+<section class="service">
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>fast delivery</h3>
+            <p>Get your orders delivered at lightning speed! We offer fast, secure, and on-time delivery, so you can enjoy your products without the wait.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-undo"></i>
+            <h3>10 days replacements</h3>
+            <p>Shop with confidence! If something’s not right, you’re covered with our 10-day hassle-free replacement policy. </p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-headset"></i>
+            <h3>24 x 7 support</h3>
+            <p>
+              Whether it’s a question, issue, or just a quick check-in, our friendly support team is available 24/7 to help you out.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- service section ends -->
+
+<!-- products section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> latest <span>products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <img src="images/product-1.png" alt="">
+            <div class="content">
+                <h3>Nike shoes Green</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="nike shoes green">
+                    <input type="hidden" name="price" value="99.99">
+
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="product-1.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <img src="images/product-2.png" alt="">
+            <div class="content">
+                <h3>Nike shoes Jordan</h3>
+                <div class="price">$99.99 <span>$120.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Nike Shoes Jordan">
+                    <input type="hidden" name="price" value="99.99">
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="product-2.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <img src="images/product-3.png" alt="">
+            <div class="content">
+                <h3>Nike Air</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Nike Air">
+                    <input type="hidden" name="price" value="99.99">
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="product-3.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <img src="images/product-4.png" alt="">
+            <div class="content">
+                <h3>Jordan Air</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Jordan Air">
+                    <input type="hidden" name="price" value="99.99">
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="product-4.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <img src="images/product-5.png" alt="">
+            <div class="content">
+                <h3>Military Airforce</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Military Airforce">
+                    <input type="hidden" name="price" value="99.99">
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="product-5.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+            </div>
+        </div>
+
+        <div class="box">
+           
+            <img src="images/product-6.png" alt="">
+            <div class="content">
+                <h3>Nike Limited</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="name" value="Nike Limited ">
+                    <input type="hidden" name="price" value="99.99">
+                    <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                    <input type="hidden" name="image" value="product-6.png">
+
+                    <button type="submit" class="btn">Add to Cart</button>
+                  </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- products section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Featured</span> products </h1>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-1.1.png" class="featured-image-1" alt="">
+                <img src="images/f-img-1.2.png" class="featured-image-1" alt="">
+                <img src="images/f-img-1.3.png" class="featured-image-1" alt="">
+                <img src="images/f-img-1.4.png" class="featured-image-1" alt="">
+            </div>
+            <div class="big-image">
+                <img src="images/f-img-1.1.png" class="big-image-1" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>New Nike airmax shoes RED-BLACK</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>From running errands to hitting the gym, the Nike New Air Max is your go-to shoe for both functionality and flair.. The breathable upper and sleek design ensure that you stay cool and comfortable while turning heads with their modern aesthetic</p>
+            <div class="price">$100.99 <span>$220.99</span></div>
+            <form method="POST" action="add_to_cart.php">
+                <input type="hidden" name="name" value="New Nike airmax shoes RED-BLACK">
+                <input type="hidden" name="price" value="100.99">
+                <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                <input type="hidden" name="image" value="f-img-1.1.png">
+
+                <button type="submit" class="btn">Add to Cart</button>
+              </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-2.1.png" class="featured-image-2" alt="">
+                <img src="images/f-img-2.2.png" class="featured-image-2" alt="">
+                <img src="images/f-img-2.3.png" class="featured-image-2" alt="">
+                <img src="images/f-img-2.4.png" class="featured-image-2" alt="">
+            </div>
+            <div class="big-image">
+                <img src="images/f-img-2.1.png" class="big-image-2" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike airmax shoes WHITE BLUE</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Step into the future of comfort and style with the Nike Air Max White/Blue shoes. A perfect blend of modern aesthetics and innovative technology, these sneakers provide all-day wearability, whether you’re running errands, hitting the gym, or out on the town.</p>
+            <div class="price">$90.99 <span>$129.99</span></div>
+            <form method="POST" action="add_to_cart.php">
+                <input type="hidden" name="name" value="New nike airmax shoes WHITE BLUE">
+                <input type="hidden" name="price" value="90.99">
+                <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                <input type="hidden" name="image" value="f-img-2.1.png">
+
+                <button type="submit" class="btn">Add to Cart</button>
+              </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-3.1.png" class="featured-image-3" alt="">
+                <img src="images/f-img-3.2.png" class="featured-image-3" alt="">
+                <img src="images/f-img-3.3.png" class="featured-image-3" alt="">
+                <img src="images/f-img-3.4.png" class="featured-image-3" alt="">
+            </div>
+            <div class="big-image">
+                <img src="images/f-img-3.1.png" class="big-image-3" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>New nike airmax shoes BLACK YELLOW</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Elevate your sneaker game with the Nike Air Max Black/Yellow, where striking style meets superior performance. These sneakers are designed for those who love to stand out while enjoying all-day comfort and support. With a bold black and yellow colorway, these shoes deliver a modern, energetic look that’s perfect for any occasion.</p>
+            <div class="price">$102.99 <span>$120.99</span></div>
+            <form method="POST" action="add_to_cart.php">
+                <input type="hidden" name="name" value="New nike airmax shoes BLACK YELLOW">
+                <input type="hidden" name="price" value="102.99">
+                <h2>Quantity: <input type="number" name="quantity" value="1" min="1"></h2>
+                <input type="hidden" name="image" value="f-img-3.1.png">
+
+                <button type="submit" class="btn">Add to Cart</button>
+              </form>
+        </div>
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/pic1.png" alt="">
+            <h3>Sophia Martinez</h3>
+            <p><b>"Stylish, Comfortable, and a Must-Have for Sneaker Lovers!"</b><br>
+
+                I've been wearing the Nike Air Jordan Low for a few weeks now and I'm genuinely impressed. The design is sleek and modern, with that classic Jordan vibe that always turns heads. I got the black and red colorway, and they go with almost every outfit.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/pic2.png" alt="">
+            <h3>John Doe</h3>
+            <p><b>"Perfect Blend of Comfort and Style!"</b><br>
+
+                I recently bought the Puma White Airforce and I’m in love with them! The clean white design is so versatile, it pairs perfectly with almost any outfit. Whether I’m heading to work or going out with friends, these sneakers have become my go-to choice.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/pic3.png" alt="">
+            <h3>Ethan Carter</h3>
+            <p><b>"Exceptional Comfort and Style!"</b><br>
+                I recently picked up the Nike New AirMax Shoes and honestly, they exceeded all my expectations. The moment I put them on, I could feel the difference — the cushioning is insane, and they’re so comfortable for long hours of walking or standing. Whether I’m running errands or hitting the gym, my feet stay cushioned and supported.
+            </p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- newsletter section starts  -->
+
+<section class="newsletter">
+
+    <div class="content">
+        <h3>monthly newsletter</h3>
+        <p>Sign up for our Monthly Newsletter and be the first to receive the latest updates, exclusive offers, product launches, and industry insights directly to your inbox. Whether you’re looking to stay ahead of trends, access special promotions, or simply stay informed, our newsletter has you covered.</p>
+        <form action="">
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="submit" value="send" class="btn">
+        </form>
+    </div>
+
+</section>
+
+<!-- newsletter section ends -->
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our stores</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">paris</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">products</a>
+            <a href="#">featured</a>
+            <a href="#">review</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my favorite</a>
+            <a href="cart.php">my orders</a>
+            <a href="#">newsletter</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+        <div class="credit">created by <span> Atharv,Ranveer and Aditya </span> | all rights reserved</div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+    
+</body>
+</html>
